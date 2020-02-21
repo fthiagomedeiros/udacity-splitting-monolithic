@@ -1,0 +1,19 @@
+version: "3"
+services:
+ reverse-proxy:
+   build:
+   context: ./udacity-c3-deployment/docker
+   image: fthiagomedeiros/reverse-proxy 
+ backend_user:
+   build:
+   context: ./udacity-c3-restapi-user
+   image: fthiagomedeiros/udacity-rest-api-user
+ backend_feed:
+   build:
+   context: ./udacity-c3-restapi-feed 
+   image: fthiagomedeiros/udacity-rest-api-feed
+ frontend:
+   build:
+   context: ./udacity-c3-frontend
+   image: thiagomedeiros/udacity-frontend
+
