@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name:  hello-kube-pod
+  labels:
+    app:  hello-kube-pod
+spec:
+  containers:
+    - name: hello-kube-pod
+      image: fthiagomedeiros/hello-kube:latest
+      ports:
+      - containerPort: 3000
